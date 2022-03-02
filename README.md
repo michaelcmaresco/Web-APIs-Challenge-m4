@@ -27,3 +27,7 @@
 
 # Live URL
     # Web-APIs-Challenge-m4
+    https://michaelcmaresco.github.io/Web-APIs-Challenge-m4/
+
+# A note from the author
+    # All content here is free to be used.
