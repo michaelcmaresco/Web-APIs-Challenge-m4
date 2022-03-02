@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz Challenge</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Heading across pages -->
+    <div class="first-page">
+        <div class="row header">
+            <div class="col-md-10 col-sm-6">
+                <h5 id="h-score">View High Scores</h5>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <h6 id="time">Timer: </h6>
+                    <h7>Click Start to Begin</h7>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- opening title,info & start-->
+        <div class="wrapper">
+            <div class=" row ">
+                <div class="col-md-10 col-sm-6">
+                    <h2>Coding Quiz Challenge</h2> <!-- The opening title -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-sm-6">
+                    <p>Try to answer the following code-related questions within the limit.
+                        Keep in mind that incorrect answers will penalize your score
+                        time by 15 seconds</p>
+
+                    <button id="start" class="btn btn-primary btn-lg">Start Quiz</button> <!-- The star button to begin -->
+                </div>
+            </div>
+        </div>
+
+
+        <!--- Contains the Questions -->
+        <div class="divContainer"> <!-- can think of this as a container of questions -->
+
+            <!---This is begening of the first div that will display each questions -->
+
+            <h3 id="title"> <!-- the specific question-->
+
+            </h3>
+            <ol id="q-list"> <!-- the answer choices -->
+
+
+            </ol>
+
+        </div>
+        <br>
+        <div id="response"> </div> <!-- This gives us a "correct" or "Wrong" response to our question answer choice -->
+
+        <div class="finish-section">
+            <h3>Game Completed</h3> <!-- shows us the game is over -->
+
+            <p id="result"> </p>
+            <p id="errorSmg"></p>
+
+            <form class="form-inline">
+                <div class="form-group mb-2">
+                    <h5 id="staticEmail2"> Enter Name </h5> <!-- to the left of the text box -->
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="text" class="form-control" id="inputInitial" placeholder="Enter your Name"> </div> <!-- within the text box -->
+                <button type="submit" class="btn btn-primary mb-2"> Submit </button> <!-- submit buitton-->
+            </form>
+
+        </div>
+        <div class="final-page">
+            <h2> HighScores </h2>
+
+            <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="1.">
+
+            </div>
+            <button class="myBtn" onclick="init()"> Go Back </button>
+            <button class="myBtn" onclick="clearScore()"> Clear highScores </button>
+
+
+        </div>
+
+
+        <script src="./assets/questions.js"></script>
+        <script src="./assets/questionsFile.js"></script>
+</body>
+
+</html>
